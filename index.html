@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Countdown Timer</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+
+  <body>
+    <div class="countdown">
+      <h1>
+        <div>Time till <time class="countdown__target">My Birthday</time></div>
+      </h1>
+
+      <div class="countdown__timer">
+        <div class="timer__box" data-unit="years">
+          <span class="timer__number" data-years="yy">20</span>
+        </div>
+        <div class="timer__box" data-unit="months">
+          <span class="timer__number" data-months="MM">20</span>
+        </div>
+        <div class="timer__box" data-unit="days">
+          <span class="timer__number" data-days="dd">20</span>
+        </div>
+        <div class="timer__box" data-unit="hours">
+          <span class="timer__number" data-hours="HH">20</span>
+        </div>
+        <div class="timer__box" data-unit="minutes">
+          <span class="timer__number" data-minutes="mm">20</span>
+        </div>
+        <div class="timer__box" data-unit="seconds">
+          <span class="timer__number" data-seconds="ss">20</span>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/countdown.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

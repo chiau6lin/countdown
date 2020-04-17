@@ -1,0 +1,137 @@
+:root {
+  --indigo-050: #e0e8f9;
+  --indigo-100: #bed0f7;
+  --indigo-200: #98aeeb;
+  --indigo-300: #7b93db;
+  --indigo-400: #647acb;
+  --indigo-500: #4c63b6;
+  --indigo-600: #4055a8;
+  --indigo-700: #35469c;
+  --indigo-800: #2d3a8c;
+  --indigo-900: #19216c;
+
+  --orange-vivid-050: #ffe8d9;
+  --orange-vivid-100: #ffd0b5;
+  --orange-vivid-200: #ffb088;
+  --orange-vivid-300: #ff9466;
+  --orange-vivid-400: #f9703e;
+  --orange-vivid-500: #f35627;
+  --orange-vivid-600: #de3a11;
+  --orange-vivid-700: #c52707;
+  --orange-vivid-800: #ad1d07;
+  --orange-vivid-900: #841003;
+
+  --cool-grey-050: #f5f7fa;
+  --cool-grey-100: #e4e7eb;
+  --cool-grey-200: #cbd2d9;
+  --cool-grey-300: #9aa5b1;
+  --cool-grey-400: #7b8794;
+  --cool-grey-500: #616e7c;
+  --cool-grey-600: #52606d;
+  --cool-grey-700: #3e4c59;
+  --cool-grey-800: #323f4b;
+  --cool-grey-900: #1f2933;
+
+  --magenta-vivid-050: #fdebff;
+  --magenta-vivid-100: #f8c4fe;
+  --magenta-vivid-200: #f48fff;
+  --magenta-vivid-300: #f368fc;
+  --magenta-vivid-400: #ed47ed;
+  --magenta-vivid-500: #e019d0;
+  --magenta-vivid-600: #cb10b8;
+  --magenta-vivid-700: #b30ba3;
+  --magenta-vivid-800: #960888;
+  --magenta-vivid-900: #6e0560;
+
+  --red-vivid-050: #ffe3e3;
+  --red-vivid-100: #ffbdbd;
+  --red-vivid-200: #ff9b9b;
+  --red-vivid-300: #f86a6a;
+  --red-vivid-400: #ef4e4e;
+  --red-vivid-500: #e12d39;
+  --red-vivid-600: #cf1124;
+  --red-vivid-700: #ab091e;
+  --red-vivid-800: #8a041a;
+  --red-vivid-900: #610316;
+
+  --yellow-vivid-050: #fffbea;
+  --yellow-vivid-100: #fff3c4;
+  --yellow-vivid-200: #fce588;
+  --yellow-vivid-300: #fadb5f;
+  --yellow-vivid-400: #f7c948;
+  --yellow-vivid-500: #f0b429;
+  --yellow-vivid-600: #de911d;
+  --yellow-vivid-700: #cb6e17;
+  --yellow-vivid-800: #b44d12;
+  --yellow-vivid-900: #8d2b0b;
+
+  --green-vivid-050: #e3f9e5;
+  --green-vivid-100: #c1f2c7;
+  --green-vivid-200: #91e697;
+  --green-vivid-300: #51ca58;
+  --green-vivid-400: #31b237;
+  --green-vivid-500: #18981d;
+  --green-vivid-600: #0f8613;
+  --green-vivid-700: #0e7817;
+  --green-vivid-800: #07600e;
+  --green-vivid-900: #014807;
+}
+
+html {
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-size: 125%;
+  line-height: 1.4;
+  font-weight: 400;
+  color: var(--indigo-100);
+}
+
+body {
+  display: grid;
+  grid-template-columns: minmax(auto, 40em);
+  justify-content: center;
+  align-items: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  background: var(--cool-grey-900);
+  min-height: 100vh;
+}
+
+.countdown > h1 {
+  font-size: 2.5rem;
+  line-height: 1.2;
+  font-weight: 300;
+  margin: auto;
+  text-align: center;
+}
+
+.countdown > h1 + * {
+  margin-top: 2rem;
+}
+
+.countdown__timer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(6em, 1fr));
+  grid-gap: 0.75em;
+}
+
+.timer__box {
+  display: grid;
+  place-items: center;
+}
+
+.timer__number {
+  font-size: 2rem;
+  line-height: 1.2;
+  font-weight: 300;
+}
+
+/* 
+ * Displaying years, months, etc
+ * without manually typing them in HTML
+ */
+.timer__box::after {
+  font-size: 0.75rem;
+  content: attr(data-unit);
+  font-variant: small-caps;
+  letter-spacing: 0.225em;
+}
